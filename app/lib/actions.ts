@@ -13,7 +13,9 @@ const FormSchema = z.object({
     }),
     amount: z.coerce.number()
     .gt(0, { message: 'Please enter a number greater than $0'}),
-    status: z.enum(['pending', 'paid']),
+    status: z.enum(['pending', 'paid'], {
+      invalid_type_error: 'Please select a customer'
+    }), 
     date: z.string(),
 })
 
