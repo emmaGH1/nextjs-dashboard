@@ -33,8 +33,8 @@ export const { auth, signIn, signOut } = NextAuth({
 
           if (passwordsMatch) return user;
         }
-
-        console.log('Invalid credentials')
+ 
+        console.log('Invalid credentials');
         return null;
       },
     }),
